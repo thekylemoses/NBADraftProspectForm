@@ -16,7 +16,9 @@ namespace NBADraftProspectForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form());
+            List<PlayerReport> players = new List<PlayerReport>();
+            PlayerReportController playerReportController = new PlayerReportController(players);
+            Application.Run(new frmPlayerInfo(playerReportController));
         }
     }
 }
